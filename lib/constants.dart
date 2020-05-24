@@ -11,4 +11,4 @@ const String ANDROID_APPNAME_KEY = 'android:label';
 const String IOS_PBXPROJ_FILE = 'ios/Runner.xcodeproj/project.pbxproj';
 const String IOS_PLIST_FILE = 'ios/Runner/Info.plist';
 const String IOS_APPID_KEY = 'PRODUCT_BUNDLE_IDENTIFIER';
-const String IOS_APPNAME_KEY = 'CFBundleName';
+const IOS_APPNAME_KEY = ['CFBundleName', 'CFBundleDisplayName'];

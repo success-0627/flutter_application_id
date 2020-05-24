@@ -64,8 +64,10 @@ Future<void> updateApplicationIdFromConfig(Configuration config) async {
       }
       if (config.ios.name != null) {
         stdout.writeln('Updating iOS application name');
-        FileUpdater.updateFile(
-            File(IOS_PLIST_FILE), Plist(IOS_APPNAME_KEY, config.ios.name));
+        final file = File(IOS_PLIST_FILE);
+        IOS_APPNAME_KEY.forEach((key) {
+          FileUpdater.updateFile(file, Plist(key, config.ios.name));
+        });
       }
     }
   }
